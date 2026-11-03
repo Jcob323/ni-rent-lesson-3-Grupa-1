@@ -111,7 +111,7 @@ class Manager:
 if __name__ == '__main__':
     parameters = Parameters()
     manager = Manager(parameters)
-
+    print("=" * 40)
     for apartment in manager.apartments.values():
         print(apartment.key, apartment.name, apartment.location, apartment.area_m2)
         for room in apartment.rooms.values():
@@ -120,7 +120,7 @@ if __name__ == '__main__':
         for bill in manager.bills:
             if bill.apartment == apartment.key:
                 print('  ', bill.amount_pln, bill.date_due, bill.settlement_year, bill.settlement_month, bill.type)
-
+    print("=" * 40)
     for tenant in manager.tenants.values():
         print(tenant.name, tenant.apartment, tenant.room, tenant.rent_pln, tenant.deposit_pln, tenant.date_agreement_from, tenant.date_agreement_to)
         for transfer in manager.transfers:
