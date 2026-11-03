@@ -3,7 +3,7 @@ from typing import Dict, List
 
 import json
 
-class ApartmentSettlement(BaseModel):
+class ApartSettle(BaseModel):
     apartment: str
     settlement_year: int
     settlement_month: int
